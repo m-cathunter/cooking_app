@@ -8,4 +8,9 @@ class ContentfulApi
       raise_errors: true
     )
   end
+
+  # Return only objects with content type - recipe
+  def self.recipes
+    client.entries(content_type: 'recipe')
+  end
 end
