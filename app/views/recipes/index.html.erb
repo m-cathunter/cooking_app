@@ -1,0 +1,4 @@
+<% @recipes.map do |recipe| %>
+  <li><%= link_to recipe.fields[:title], recipe_path(recipe.id) %></li>
+  <ul><%= image_tag recipe.photo.url %></ul>
+<% end %>
