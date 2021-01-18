@@ -17,6 +17,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # It helps to access Content stored in Contentful
 gem 'contentful', '~> 2.15', '>= 2.15.4'
+# For rendering markdown
+gem 'markdown', '~> 1.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
