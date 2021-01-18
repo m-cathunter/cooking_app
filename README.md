@@ -1,24 +1,36 @@
-# README
+## Getting started
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby version:
+```
+2.7.1
+```
 
-Things you may want to cover:
+Rails version
+```
+6.0.3.4
+```
 
-* Ruby version
+To get started with the app, clone the repo and then install the needed gems:
 
-* System dependencies
+```
+$ bundle install
+```
 
-* Configuration
+Create .env file and put there keys:
 
-* Database creation
+```
+ACCESS_TOKEN: 'your_access_token'
+SPACE: 'your_space'
+```
 
-* Database initialization
+Run the test suite to verify that everything is working correctly:
 
-* How to run the test suite
+```
+$ rails test:system
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* Deployment instructions
-
-* ...
+```
+$ rails server
+```
