@@ -1,4 +1,13 @@
-<% @recipes.map do |recipe| %>
-  <li><%= link_to recipe.fields[:title], recipe_path(recipe.id) %></li>
-  <ul><%= image_tag recipe.photo.url %></ul>
-<% end %>
+<div class="row">
+  <div class="col-md-10 col-md-offset-4">
+    <h2>See our recipes and pick your favourites!</h2>
+    <% @recipes.map do |recipe| %>
+      <div class="card bg-light">
+        <div class="card-header"><%= link_to recipe.fields[:title], recipe_path(recipe.id) %></div>
+        <div class="card-body">
+          <%= image_tag recipe.photo.url, class: "img-fluid" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

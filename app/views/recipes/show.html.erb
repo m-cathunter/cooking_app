@@ -1,12 +1,15 @@
-<ul><%= @recipe.title %></ul>
-<ul><%= image_tag @recipe.photo.url %></ul>
-<ul><%= markdown_to_html(@recipe.description) %></ul>
-<% if @recipe.fields[:chef] %>
-  <ul><%= ContentfulApi.client.entry(@recipe.chef.id).name %></ul>
-<% end %>
+<div class="row">
+  <div class="col-md-10 col-md-offset-4">
+    <h1><%= @recipe.title %></h1>
+    <% chef = find_chef(@recipe) %>
+    <% if chef %>
+      <p><%= chef.name %></p>
+    <% end %>
+    <%= image_tag @recipe.photo.url, class: "img-fluid" %>
+    <p><%= markdown_to_html(@recipe.description) %></p>
 
-<% if @recipe.fields[:tags] %>
-  <% @recipe.tags.map do |tag| %>
-    <ul><%= ContentfulApi.client.entry(tag.id).name %></ul>
-  <% end %>
-<% end %>
+    <% find_tags(@recipe).map do |tag| %>
+      <span class="badge badge-primary"><%= tag.name %></span>
+    <% end %>
+  </div>
+</div>

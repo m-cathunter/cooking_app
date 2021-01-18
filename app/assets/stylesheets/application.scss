@@ -1,1 +1,79 @@
 @import "bootstrap";
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: -2px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+  color: gray;
+}
+
+p {
+  margin-top: 30px;
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+a {
+  color: #008000;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: green;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: grey;
+    text-decoration: none;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto
+}
+
+.badge{
+  margin-bottom: 20px;
+}
+
+.card{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 35px;
+  border-top: 1px solid gray;
+  color: gray;
+
+  small {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+}
