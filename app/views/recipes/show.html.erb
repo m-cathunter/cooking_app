@@ -1,6 +1,6 @@
 <ul><%= @recipe.title %></ul>
 <ul><%= image_tag @recipe.photo.url %></ul>
-<ul><%= @recipe.description %></ul>
+<ul><%= markdown_to_html(@recipe.description) %></ul>
 <% if @recipe.fields[:chef] %>
   <ul><%= ContentfulApi.client.entry(@recipe.chef.id).name %></ul>
 <% end %>
