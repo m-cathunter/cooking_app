@@ -1,0 +1,12 @@
+<ul><%= @recipe.title %></ul>
+<ul><%= image_tag @recipe.photo.url %></ul>
+<ul><%= @recipe.description %></ul>
+<% if @recipe.fields[:chef] %>
+  <ul><%= ContentfulApi.client.entry(@recipe.chef.id).name %></ul>
+<% end %>
+
+<% if @recipe.fields[:tags] %>
+  <% @recipe.tags.map do |tag| %>
+    <ul><%= ContentfulApi.client.entry(tag.id).name %></ul>
+  <% end %>
+<% end %>

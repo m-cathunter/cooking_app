@@ -4,5 +4,6 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @recipe = ContentfulApi.client.entry(params[:id])
   end
 end
