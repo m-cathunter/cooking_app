@@ -15,7 +15,7 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# It helps to access Content stored in Contentful.
+# It helps to access Content stored in Contentful
 gem 'contentful', '~> 2.15', '>= 2.15.4'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -28,6 +28,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Storing configuration keys in env files
+  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 end
 
 group :development do
