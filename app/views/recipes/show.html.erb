@@ -1,15 +1,18 @@
 <div class="row">
   <div class="col-md-10 col-md-offset-4">
     <h1><%= @recipe.title %></h1>
-    <% chef = find_chef(@recipe) %>
-    <% if chef %>
+    <% if chef = @recipe.chef %>
       <p><%= chef.name %></p>
     <% end %>
-    <%= image_tag @recipe.photo.url, class: "img-fluid" %>
+    <% if @recipe.photo %>
+    <%= image_tag @recipe.photo, class: "img-fluid" %>
+    <% end %>
     <p><%= markdown_to_html(@recipe.description) %></p>
 
-    <% find_tags(@recipe).map do |tag| %>
-      <span class="badge badge-primary"><%= tag.name %></span>
+    <% if @recipe.tags %>
+      <% @recipe.tags.map do |tag| %>
+        <span class="badge badge-primary"><%= tag %></span>
+      <% end %>
     <% end %>
   </div>
 </div>
