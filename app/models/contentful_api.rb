@@ -9,8 +9,14 @@ class ContentfulApi
     )
   end
 
+  private_class_method :client
+
   # Return only objects with content type - recipe
   def self.recipes
     client.entries(content_type: 'recipe')
+  end
+
+  def self.find(id)
+    client.entry(id)
   end
 end
